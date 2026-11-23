@@ -1,0 +1,19 @@
+@startuml
+title Registro de incidencias tecnológicas — RF-01 y RF-02
+start
+:El usuario solicita registrar una incidencia;
+:El sistema muestra el formulario;
+:El usuario captura tipo, descripción y ubicación;
+:El usuario selecciona "Registrar";
+:El sistema valida los tres campos obligatorios;
+while (¿Los tres campos están completos?) is (No)
+  :El sistema impide completar el registro;
+  :El sistema identifica y señala los campos faltantes;
+  :El usuario corrige la información;
+  :El usuario vuelve a seleccionar "Registrar";
+  :El sistema valida nuevamente los tres campos;
+endwhile (Sí)
+:El sistema registra la incidencia;
+:El sistema confirma el registro;
+stop
+@enduml
